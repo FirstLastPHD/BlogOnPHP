@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>My Blog</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name ="description" content=""/>
+ <meta name="keywords" content="" />
+ <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+ <link rel="stylesheet" href="styles/main.css" type="text/css" />
+ <link  rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+ <script type="text/javascript">
+		$(document).ready(function() {
+			var w = $(window).width();
+			if (w <= 768) {
+				$("#left").html($("#left").html() + $("#right").html());
+				$("#right").remove();
+			}
+			if (w <= 600) {
+				var h2 = $("#course h2");
+				$("#course h2").remove();
+				$(h2).prependTo("#course");
+			}
+			if (w <= 468) {
+				$("#top_sep").replaceWith("<br /><br />");
+			}
+		});
+	</script>
+</head>
+
+<body>
+  <div id="container">
+       <header>
+	   <h1><img src="images/logo.png" alt="" /></h1>
+	    <nav>
+		  <ul id="topmenu">
+		    <li>
+			     <a href="#"> 
+                   <span>Main</span>			
+			     </a>  
+		   </li>
+		   <li>
+			     <a href="#" class="active"> 
+                   <span>Author</span>			
+			     </a>  
+		   </li>
+		   <li>
+			     <a href="#"> 
+                   <span>Supporting</span>			
+			     </a>  
+		   </li>
+		   
+		   <li>
+			     <a href="#"> 
+                   <span>Forum</span>			
+			     </a>  
+		   </li>
+		   
+		   <li>
+			     <a href="#"> 
+                   <span>Orders</span>			
+			     </a>  
+		   </li>
+		   
+		    <li>
+			     <a href="#"> 
+                   <span>Tests</span>			
+			     </a>  
+		   </li>
+		   
+		    <li>
+			     <a href="#"> 
+                   <span>Blog</span>			
+			     </a>  
+		   </li>
+		    <li>
+			     <a href="#"> 
+                   <span class="fbk"><img src="images/fb.png" alt="" /></span>			
+			     </a>  
+		   </li>
+		    <li>
+			     <a href="#"> 
+                   <span class="google"><img src="images/g_Plus.png" alt="" /></span>			
+			     </a>  
+		   </li>
+		   <li>
+			     <a href="#"> 
+                   <span class="twitter"><img src="images/twitter.png" alt="" /></span>			
+			     </a>  
+		   </li>
+		   <li>
+			     <a href="#"> 
+                   <span class="photo_netw"><img src="images/photo_soc.png" alt="" /></span>			
+			     </a>  
+		   </li>
+		   
+		   </ul>
+		 </nav>
+  
+       </header>
+	   
+	   <div id="top">
+	     <div class="clear"></div>
+		 <div id="search">
+		   <form name="search" action="#" method="get">
+		        <table>
+				  <tr>
+				     <td>
+					   <input type="text" name="query" placeholder="Search" />
+					 </td>
+					 <td>
+					   <input type="submit" name="search" value="" />
+					 </td>
+				  </tr>
+				</table>
+				</form>
+		 </div>
+		 
+		 <div id="auth">
+		     <form name="auth" action="#" method="post">
+			    <div>
+				  <input type="text" name="login" placeholder="Login" />
+				  <input type="password" name="password" placeholder="Password" />
+				  <input type="submit" name="auth" value="Come in" />
+				</div>
+			 </form> 
+		     <img src="images/bg_item.png" alt="" />
+			 <img src="images/icon_registr.png" alt="" id="icon_registr" />
+			 <a href="#" id="link_registr">Registr</a>
+			 <img src="images/bg_item.png" alt="" />
+			 <div id="links_reset">
+			    <a href="#">Forgot Password?</a>
+				<a href="#">Forgot Login?</a>
+             </div>
+		 </div>		  
+	</div>	
+
+      <div id="slider">
+	     <div id="course">
+		    <img src="images/slider.png" alt="Sleader Header" />
+			<h2> Slider Header </h2>
+			<section>
+			  <p>Lorem ipsum dolor sit amet, consectetuer <b>adipiscing elit</b>. Aenean commodo ligula eget dolor. Aenean massa. </p>
+			  <p>Cum sociis natoque penatibus et magnis dis <b>parturient montes</b>, nascetur ridiculus mus. Donec quam felis, <b>ultricies nec, pellentesque eu</b>, pretium quis, sem. . </p>
+			<a class="more" href="#">More</a>
+			</section>
+		 </div>
+		 <div class="clear"></div>
+	  </div>
+      	
+        <div id="content">
+		   <div id="left">
+		      <div class="block">
+			     <div class="header">Articles and Lessons</div>  
+					<div class="content">
+						<nav>
+							<div>
+								<a class="active" href="#">HTML</a>
+								<div>
+									<a href="#">HTML Основы</a>
+								</div>
+								<div>
+									<a href="#">HTML5</a>
+								</div>
+							</div>
+							<div>
+								<a href="#">CSS</a>
+							</div>
+							<div>
+								<a href="#">JavaScript</a>
+							</div>
+							<div>
+								<a href="#">PHP</a>
+							</div>
+							<div>
+								<a href="#">MySQL</a>
+							</div>
+							<div>
+								<a href="#">XML</a>
+							</div>
+						</nav>
+					</div>
+					
+				 </div>
+				 
+				 <div class="block">
+			     <div class="header">Subscribe</div>
+				 <div class="content">
+				   <div id="subscribe_fb">
+				      <div id="subscribe">
+					     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean <b>commodo ligula eget dolor</b>.</p>
+						 <img src="images/icon_rss.png" alt="Subscribe" />
+						 <a href="#" class="button">Subscribe</a>
+					  </div>
+					  <div class="clear"></div>
+					  <img id="subscribe_fb_sep" src="images/menu_sep.png" alt="" />
+					  <div class="clear"></div>
+					  <div id="fb">
+					  <p>Lorem ipsum dolor sit amet, consectetuer <b>adipiscing elit</b>. Aenean commodo ligula eget dolor.</p>
+					  <img src="images/icon_fb.png" alt="My account" />
+					  <a href="#" class="button">My account</a>
+					  </div>
+				   </div>
+			      <div class="clear"></div>
+				 </div>
+			  </div>
+			  
+			 <div class="block">
+			     <div class="header">Interview</div>
+				 <div class="content">
+				 <div id="poll">
+				  <p>Your favorite category?</p>
+				  <form name="poll" action="#" method="post">
+				     <div>
+					   <input id="poll_id_1" type="radio" name="poll_id" value="1" />
+					   <label for="poll_id_1">HTML</label>
+					 </div>
+					 
+					 <div>
+					   <input id="poll_id_2" type="radio" name="poll_id" value="2" />
+					   <label for="poll_id_2">CSS</label>
+					 </div>
+					 
+					 <div>
+					   <input id="poll_id_3" type="radio" name="poll_id" value="3" />
+					   <label for="poll_id_3">PHP</label>
+					 </div>
+					 
+					 <div>
+					   <input id="poll_id_4" type="radio" name="poll_id" value="4" />
+					   <label for="poll_id_4">MySql</label>
+					 </div>
+					 
+					 <div>
+					  <input type="submit" name="poll" value="Vote" class="button" />
+					 </div>
+					 
+				  </form>
+				 </div>
+				  
+				 </div>
+			  </div> 
+		   </div>
+        
+
+      <div id="right">
+	      <div class="block">
+			     <div class="header">Free Courses</div>
+				 <div class="content">
+			        <div class="free">
+					   <p class="title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+					   <img src="images/robotic.png" alt="Free Php Course" />
+					   <p><b>Lorem ipsum dolor sit</b></p>
+					  <p> - amet consectetuer</p> 
+					  <p>- adipiscing elit. </p>
+					  <p>- Aenea</p>
+					   <p class="center"><b>Lorem ipsum dolor sit amet.<br /> consectetuer adipiscing elit. Aenea</b></p>
+					   <form name="free_course" action="#" method="post">
+					     <table>
+						 <tr>
+						   <td>
+						     <label for="free_course_email">E-mail</label> 
+							 </td>
+							 <td>
+							  <input id="free_course_email" type="text" name="email" />
+							 </td>
+						  </tr>
+						  
+						  <tr>
+						   <td>
+						     <label for="free_course_name">Name:</label> 
+							 </td>
+							 <td>
+							  <input id="free_course_name" type="text" name="name" />
+							 </td>
+						  </tr>
+						  
+						  <tr>
+						    <td colspan="2" class="center">
+							  <input type="submit" name="free_course" value="Get course" class="button" />
+							</td>
+						  </tr>
+						 </table>
+					   </form>
+					</div>
+				  
+				 </div>
+			  </div>
+           
+		    <div class="block">
+			     <div class="header">Seminars</div>
+				 <div class="content">
+			        <div class="free">
+					   <p class="title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+					   <img src="images/flower.png" alt="Free Php Course" />
+					   <p><b>Lorem ipsum dolor sit</b></p>
+					  <p> - amet consectetuer</p> 
+					  <p>- adipiscing elit. </p>
+					  <p>- Aenea</p>
+					   <p class="center"><b>Lorem ipsum dolor sit amet.<br /> consectetuer adipiscing elit. Aenea</b></p>
+					<div class="center">
+							  <a href="#" class="button">Send</a>
+				    </div>
+					</div>
+				 </div>
+			  </div>
+			  
+	          <div class="block">
+			     <div class="header">Clever quotes</div>
+				  <div class="content">
+			        <div id="quote">
+					   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum.</p>
+					   <p class="right"><i>Albert Enshteine</i></p>
+					   </div>
+					</div>
+			  </div>
+			  
+      </div>	
+<div id="center">
+	 <div class="main">
+	   <nav>
+	      <p>You are here: Main</p>
+	   </nav>
+	   <article>
+	   <h1>Some Article Header</h1>
+	   <div class="article_img">
+	     <img src="images/site.png" alt="How is to create a website" />
+	   </div>
+	   <p><b>Lorem ipsum dolor sit amett, consectetuer adipiscing elit.</b> Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+	   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+	   <p><span class="red">n enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</span> Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. </p>
+		<p><b>1)</b> Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+		<p><b>2)</b> Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
+		<p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. </p>
+		<p><span class="red"> Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</span> Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
+		<p><b>1)</b><a href="#">HTML</a>. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. </p>
+		<p><b>2)</b><a href="#">CSS</a>.Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+		<p><b>2)</b><a href="#">Javascript</a>.Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>
+		<p><b>3)</b><a href="#">PHP</a>.Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>
+	   </article>
+     </div>	
+	 
+	 <div class="main">
+	   <h2 class="h1">Recent articles</h2>
+	   <section>
+	     <div class="article_img">
+		    <img src="images/article_img.png" alt="" />
+		    <div>
+			   <img class="date_img" src="images/date.png" alt="" />
+			   <div class="date_text">25<br /> Jen</div>
+			   </div>
+			  </div>
+			   <h2>Recent articles</h2>
+			   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea</p>
+			   <a class="more" href="#" >Read<img src="images/arrow_more.png"  alt="" /></a>
+			   <div class="clear"></div>
+		 <div class="article_info">
+		 <ul>
+		   <li>
+		    <img src="images/icon_user.png" alt="" />
+		   </li>
+		   <li>Jaroslav King </li>
+		   <li>2 views </li>
+		   <li>
+		     <a href="#">PHP</a>
+		   </li>
+		   
+		   <li>
+		     <a href="#">PHP Basics</a>
+		   </li>
+		 </ul>
+		 <div class="clear"></div>
+		 </div>
+	   </section>
+	   
+	     <section>
+	     <div class="article_img">
+		    <img src="images/article_img.png" alt="" />
+		    <div>
+			   <img class="date_img" src="images/date.png" alt="" />
+			   <div class="date_text">25<br /> Jen</div>
+			   </div>
+			  </div>
+			   <h2>Recent articles</h2>
+			   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenea</p>
+			   <a class="more" href="#" >Read<img src="images/arrow_more.png" alt="" /></a>
+			   <div class="clear"></div>
+		 <div class="article_info">
+		 <ul>
+		   <li>
+		    <img src="images/icon_user.png" alt="" />
+		   </li>
+		   <li>Jaroslav King </li>
+		   <li>2 views </li>
+		   <li>
+		     <a href="#">PHP</a>
+		   </li>
+		   
+		   <li>
+		     <a href="#">PHP Basics</a>
+		   </li>
+		 </ul>
+		 <div class="clear"></div>
+		 </div>
+	   </section>
+	   
+	   <div id="pagination">
+		<span>First</span>
+		<span class="last"><a href="#"></a></span>
+	    <span class="active">1</span>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<span class="next"><a href="#"></a></span>
+		<span class="prevb"><a href="#">Last</a></span>
+	  </div>
+	 </div>
+</div>
+	 <div class="clear"></div>
+  </div>
+     <footer>
+	    <div class="sep"></div>
+		<p>
+		<a href="#">
+		<img src="images/counter.png" alt="Counter" />
+		</a>
+		</p>
+		
+		<p>
+		<a href="#">
+		<img src="images/counter1.png" alt="Counter" />
+		</a>
+		</p>
+		<p>Copyright @ All Rights Reserved</p>
+	 </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<div class="main">
+	
+	<article>
+		<h1><?=$article->title?></h1>
+		<?php if ($article->img) { ?>
+			<div class="article_img">
+				<img src="<?=$article->img?>" alt="<?=$article->title?>" />
+			</div>
+		<?php } ?>
+		<?=$article->full?>
+		<div class="article_info">
+			<ul>
+				<li>
+					<div>
+						<img src="/images/date_article.png" alt="" />
+					</div>
+					Created <?=$article->date?>
+				</li>
+				<li>
+					<img src="/images/icon_user.png" alt="" />
+					Jaroslav King
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</article>
+	
+	
+	
+	
+</div>

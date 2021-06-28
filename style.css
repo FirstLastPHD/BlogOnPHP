@@ -1,0 +1,107 @@
+/*Animation*/
+
+@keyframes seconds{
+    0%{
+        transform:rotate(90deg);
+    }
+    100%{
+        transform:rotate(450deg);
+    }
+}
+
+@-webkit-keyframes seconds{
+    0%{
+        transform:rotate(90deg);
+    }
+    100%{
+        transform:rotate(450deg);
+    }
+}
+
+@keyframes minutes{
+    0%{
+        transform:rotate(120deg);
+    }
+    100%{
+        transform:rotate(480deg);
+    }
+}
+
+@-webkit-keyframes minutes{
+    0%{
+        transform:rotate(120deg);
+    }
+    100%{
+        transform:rotate(480deg);
+    }
+}
+
+@keyframes hours{
+    0%{
+        transform:rotate(150deg);
+    }
+    100%{
+        transform:rotate(510deg);
+    }
+}
+
+@-webkit-keyframes hours{
+    0%{
+        transform:rotate(150deg);
+    }
+    100%{
+        transform:rotate(510deg);
+    }
+}
+
+.clock{
+    overflow: hidden;
+    width: 600px;
+    height: 600px;
+    margin: 20px auto 0 auto;
+    position: relative;
+    background: transparent url('../img/clockface.jpg') no-repeat 0 0;
+}
+
+.arrow-second{
+    z-index: 3;
+    position: absolute;
+    width: 30px;
+    height: 600px;
+    text-indent: -9999px;
+    left: 50%;
+    margin-left: -15px;
+    top: 0;
+    background: transparent url('../img/sechand.png') no-repeat 0 0;
+    -webkit-animation: seconds 60s steps(60, end) infinite;
+    animation: seconds 60s steps(60, end) infinite;
+}
+
+.arrow-minute{
+    z-index: 3;
+    position: absolute;
+    width: 30px;
+    height: 600px;
+    text-indent: -9999px;
+    left: 50%;
+    margin-left: -15px;
+    top: 0;
+    background: transparent url('../img/minhand.png') no-repeat 0 0;
+    -webkit-animation: minutes 3600s steps(3600, end) infinite;
+            animation: minutes 3600s steps(3600, end) infinite;
+}
+
+.arrow-hour{
+    z-index: 3;
+    position: absolute;
+    width: 30px;
+    height: 600px;
+    text-indent: -9999px;
+    left: 50%;
+    margin-left: -15px;
+    top: 0;
+    background: transparent url('../img/hourhand.png') no-repeat 0 0;
+    -webkit-animation: hours 216000s steps(216000, end) infinite;
+            animation: hours 216000s steps(216000, end) infinite;
+}
+
